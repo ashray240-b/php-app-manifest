@@ -30,14 +30,7 @@ spec:
             - secretRef:
                 name: bankapp-db-secret
 
-          resources:
-            requests:
-              cpu: "100m"
-              memory: "128Mi"
-            limits:
-              cpu: "200m"
-              memory: "256Mi"
-
+         
           volumeMounts:
             - name: mysql-data
               mountPath: /usr/share/nginx/html/
