@@ -1,3 +1,4 @@
+
 # End-to-End DevOps CI/CD Pipeline with Jenkins & Argo CD
 
 A GitOps-based CI/CD pipeline: Jenkins handles CI (build, quality checks, security scanning, image publishing), and Argo CD continuously syncs the desired state from a Git-stored manifest repo to the Kubernetes cluster.
@@ -80,15 +81,3 @@ Demonstrates the complete modern software delivery lifecycle:
 - Containerization
 - GitOps-based continuous deployment (Git as the single source of truth)
 - Kubernetes application deployment and monitoring via Argo CD
-
-**Docker deployment (Project 2) vs. GitOps/Argo CD deployment (this project):**
-
-| | Project 2 (Docker) | Project 5 (Argo CD) |
-|---|---|---|
-| Deployment trigger | Jenkins runs `docker` commands directly | Argo CD watches Git and auto-syncs |
-| Source of truth | Pipeline script | Kubernetes manifests in Git |
-| Drift handling | None — manual re-deploy needed | Auto-detected and self-healed |
-| Rollback | Manual | Git revert / Argo CD history |
-| Target | Single Docker host | Kubernetes cluster |
-
-## Screenshots
